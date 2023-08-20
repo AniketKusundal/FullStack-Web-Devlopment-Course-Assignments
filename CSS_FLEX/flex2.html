@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Simple Web-Page Structure USing Flex</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .container{
+            display: flex;
+            height: 60vh;
+        }
+        header , footer{
+            height: 20vh;
+            background-color: rgb(222, 118, 69);
+        }
+
+        nav{
+            background-color: rebeccapurple;
+            flex-grow: 1;
+        }
+
+        article{
+            flex-grow: 2;
+            background-color: cadetblue;
+        }
+
+        aside{
+            flex-grow: 1;
+            background-color: rgb(249, 154, 154);
+        }
+
+
+    </style>
+</head>
+<body>
+        <header>Header</header>
+        <div class="container">
+            <nav>Nav</nav>
+            <article>Articles</article>
+            <aside>Aside</aside>
+        </div>
+        <footer>Footer</footer>
+</body>
+</html>

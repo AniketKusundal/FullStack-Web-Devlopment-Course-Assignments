@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+
+        .container{
+            display: flex;
+            background-color: violet;
+            
+        }
+
+         .container > div{
+            font-size: 2rem;
+            padding: 5rm;
+            color: white;
+            
+            
+            
+        }
+
+        .red{
+            background-color: rgb(245, 61, 61);
+            height: 300;
+            width: 50%;
+            flex-basis: 100px;
+            flex-grow: 2;
+            flex-shrink: 3;
+        }
+
+        .blue{
+            background-color: rgb(66, 66, 173);
+            height: 300;
+            width: 50%;
+            flex-basis: 300px;
+            flex-grow: 1;
+        }
+        .yellowgreen{
+            background-color: yellowgreen;
+            height: 300px;
+            width: 50%;
+            flex-basis: 100px;
+            flex-grow: 1;
+            flex-shrink: 1;
+            
+        }
+    </style>
+</head>
+<body>
+        <div class="container">
+            <div class="red">Red</div>
+            <div class="blue">Blue</div>
+            <div class="yellowgreen">Yellowgreen</div>
+        </div>
+</body>
+</html>

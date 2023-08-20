@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From Layout Using Grid 2</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+        body{
+            margin: 0;
+            padding: 0;
+            
+        }
+        .myform > *{
+
+            font-size: .8rem;
+            font-family: 'Dancing Script', cursive;
+            font-weight: 500;
+            
+        }
+
+
+        .myform{
+            display: grid;
+            grid-template-columns: [lables] auto[controls] 1fr;
+            grid-auto-flow: row;
+            grid-gap: .8rem .5rem;
+            background: slategrey;
+            padding: 1rem;
+            width: 50rem;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+
+        .myform > label,
+        .myform > fieldset{
+
+            grid-column: lables;
+            grid-row: auto;
+        }
+
+        .myform > input,
+        .myform > select,
+        .myform > textarea,
+        .myform > button {
+            grid-column: controls;
+            grid-row: auto;
+            padding: .4rem;
+            border: 0;
+        }
+
+
+        .myform > fieldset {
+            grid-column: span 2;
+        }
+
+        .myform > button {
+            background-color:white;
+            cursor: pointer;
+            color: black;
+        }
+
+        .myform > textarea {
+            min-height:  3rem;
+        }
+        
+
+        
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <form class="myform">
+            <label for="Name" >Full Name  :</label>
+            <input type="text" class="name" placeholder="Enter Your Name"><br><br>
+
+
+            <label for="Phoen" class="phoneno">Phone  :</label>
+            <input type="tel" name="phone" id="phoneno" placeholder="Enter Your Phone Number"><br><br>
+
+
+            <fieldset>
+                <legend>Which Taxi Do You Require  ?</legend>
+                <label><input type="radio" name="taxi" id="taxi-car" value="car" required>Car</label>
+                <label><input type="radio" name="taxi" id="taxi-car" value="car" required>Van</label>
+                <label><input type="radio" name="taxi" id="taxi-car" value="car" required>Tuk Tuk</label>
+                <label><input type="radio" name="taxi" id="taxi-car" value="car" required>Auto</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Extra</legend>
+                <label><input type="checkbox" name="extra" id="extra-baby" value="baby" required>Baby Seat</label>
+                <label><input type="checkbox" name="extra" id="extra-baby" value="baby" required>Wheelchair Access</label>
+                <label><input type="checkbox" name="extra" id="extra-baby" value="baby" required>Stock Tip</label>
+            </fieldset><br><br>
+
+            <label for="Pickup-date-time">Pickup Date/Time</label>
+            <input type="date" name="pdate" id="pickup-date"><br><br><br>
+
+
+            <label for="pickup-place">Pickup Place :</label>
+            
+            <select name="pickup-place" id="place">
+                <option value="Select One">Select One</option>
+                <option value="select-place">Taxi office</option>
+                <option value="select-place">Bus Stand</option>
+                <option value="select-place">Metro Station</option>
+                <option value="select-place">We'll Gueess</option>
+            </select><br><br><br>
+
+
+            <label for="Drop-place">DropOff Place</label>
+            <input type="text" id="DropOff-place" required placeholder="Enter Your Dropoff Place"><br><br>
+
+
+           <label for="innstruction">Special Instructions</label>
+           <textarea name="instruction" id="instruction"  cols="60" rows="5" placeholder="Enter Special Instructions"></textarea><br><br><br>
+
+
+           <button type="submit">Submit Booking</button>
+
+
+
+        </form>
+    </div>
+</body>
+</html>

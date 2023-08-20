@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page Layout Using</title>
+
+    <style>
+        body{
+
+            display: grid;
+            grid-template-areas: 
+            "Header Header Header Header"
+            "Nav Articles Aside Aside"
+            "Footer Footer Footer Footer";
+            grid-template-rows: 60px 1fr 60px;
+            grid-template-rows: 20% 40% 30;
+            grid-gap: 5px;
+            height: 100vh;
+            margin: 0;
+
+        }
+
+        header , footer, div , article, nav {
+            padding: 30px;
+            background-color: yellowgreen;
+        }
+
+        #p-header{
+            grid-area: Header;
+            background-color: violet;
+        }
+
+        #page-footer{
+            grid-area: Footer;
+            background-color: tomato;
+        }
+
+        #pagearticles{
+            grid-area: Articles;
+        }
+
+        #page-navbar{
+            grid-area: Nav;
+        }
+
+        #sideads{
+            grid-area: Aside;
+        }
+
+
+        #logo{
+            grid-area: LOGO;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    
+    <header id="p-header">Header</header>
+    <article id="pagearticles">Articles</article>
+    <!-- <div id="logo">LOGO</div> -->
+    <nav id="page-navbar">Nav</nav>
+    <div id="sideads">Aside</div>
+    <footer id="page-footer">Footer</footer>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line Based Placement</title>
+    <style>
+
+
+        .container{
+        
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-gap: 10px;
+            /* background-color:cadetblue; */
+            color: black;
+        }
+
+        .box{
+            background-color: yellowgreen;
+            color: white;
+            border-radius: 5px;
+            padding: 20px;
+            font-size: 4rem;
+        }
+
+        .A{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-row-end: 2;
+        }
+
+
+
+        .B{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+
+
+
+        .C{
+            grid-column-start: 3;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 3;
+        }
+
+
+
+        .D{
+            grid-column-start: 2;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-row-end: 2;
+        }
+
+
+
+        .E{
+            grid-column-start: 1;
+            grid-column-end: 1;
+            grid-row-start: 1;
+            grid-row-end: 1;
+        }
+
+
+
+
+        .F{
+            grid-column-start: 3;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 1;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+
+    <div class="container">
+
+
+        <div class="box A">A</div>
+        <div class="box B">B</div>
+        <div class="box C">C</div>
+        <div class="box D">D</div>
+        <div class="box E">E</div>
+        <div class="box F">F</div>
+        
+        
+    </div>
+</body>
+</html>
