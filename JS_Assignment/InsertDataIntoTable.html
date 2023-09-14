@@ -1,0 +1,71 @@
+<!--  Insert data one by One on Button Click -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+
+
+    <script>
+        
+        function show() {
+
+
+            let input = document.getElementById("input");
+            let inputTwo = document.getElementById("inputTwo");
+
+            let inputValue = input.value;
+            let input2Value = inputTwo.value;
+
+
+            let mytable = document.getElementById('mytabel');
+            let elementRow = document.createElement("tr");
+            let tableDataOne = document.createElement("td");
+            let tableDataTwo = document.createElement("td");
+
+
+            tableDataOne.innerHTML = inputValue;    
+            tableDataTwo.innerHTML = input2Value;
+
+            elementRow.append(tableDataOne);
+            elementRow.append(tableDataTwo);
+
+
+
+            table.append(elementRow);
+
+        }
+        
+    </script>
+</head>
+<body>
+    
+
+    <label for="Enter Id">Id</label>
+    <input type="text" id="input" name="" placeholder="Enter A Name">
+
+
+    <label for="EnTer Name">Name</label>
+    <input type="text" id="inputTwo" name="" placeholder="Enter Name">
+
+
+
+
+    <input type="button" value="Add To Data Table" onclick="show()">
+
+    <br>
+    <br>
+    <br>
+
+    <table id="table" border="1" width="40%" height="40%" style="text-align: center;">
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+        </tr>
+    </table>
+
+</body>
+</html>
