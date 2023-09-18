@@ -1,0 +1,192 @@
+<!--  Insert data one by One on Button Click -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        table{
+            text-align: center;
+        }
+
+        table , tr, td ,th{
+            border: 1px solid rgb(46, 45, 45);
+            height: 100%;
+            width: 60%;
+        }
+
+        tr,td ,th{
+
+            width: 60%;
+        }
+
+        tr:nth-child(even){
+            background-color: rgb(120, 214, 76);
+        }
+        tr:nth-child(odd){
+            background-color: rgb(214, 198, 76);
+        }
+        .form{
+            
+            background-color: yellowgreen;
+            height: 50%;
+            width: 100%;
+        }
+        
+        
+
+        
+    </style>
+
+    <script>
+        
+        function show() {
+
+
+            let input = document.getElementById("input");
+            let inputTwo = document.getElementById("inputTwo");
+            let Male = document.getElementById("Male");
+            let Female = document.getElementById("female");
+            let Other = document.getElementById("other");
+            let state1 =document.getElementById("state");
+            
+
+            let g=""
+            if (Male.checked==true) {
+
+                g="Male";
+                
+            }
+            if (female.checked==true) {
+                g="FeMale";
+            }
+            if (Other.checked==true) {
+                g="Other";
+            }
+    
+            
+            let state=state1.value;
+
+           
+            let inputValue = input.value;
+            let input2Value = inputTwo.value;
+
+            //  For Radio 
+            let radioMale = Male.value;
+            let radioFemale = Female.value;
+            let radioOther = Other.value;
+
+            // For options
+            let maha = Maharashtra.value;
+            let TN = Maharashtra.value;
+            let jk = JammuKashmir.value;
+            let guj = Gujrat.value;
+            let del = Delhi.value;
+            let up = UtterPradesh.value;
+
+
+            let mytable = document.getElementById('mytabel');
+            let elementRow = document.createElement("tr");
+            let tableDataOne = document.createElement("td");
+            let tableDataTwo = document.createElement("td");
+            let tableDataThree = document.createElement("td");
+            let tableDataFour = document.createElement("td")
+            
+
+
+            tableDataOne.innerHTML = inputValue;    
+            tableDataTwo.innerHTML = input2Value;
+            tableDataThree.innerHTML= g;
+            tableDataFour.innerHTML= state;
+            
+            
+
+            elementRow.append(tableDataOne);
+            elementRow.append(tableDataTwo);
+            elementRow.append(tableDataThree);
+            elementRow.append(tableDataFour);
+            
+            
+
+
+
+
+            table.append(elementRow);
+            
+
+        }
+        
+
+
+    </script>
+</head>
+<body>
+
+    <div class="form">
+
+    
+
+    &nbsp;&nbsp;&nbsp; <label for="Enter Id">Id</label>
+    &nbsp;&nbsp;&nbsp; <input type="text" id="input" name="" placeholder="Enter A Name">
+    <br>
+    <br>
+
+    &nbsp;&nbsp;&nbsp; <label for="EnTer Name">Name</label>
+    &nbsp;&nbsp;&nbsp; <input type="text" id="inputTwo" name="" placeholder="Enter Name">
+    <br>
+    <br>
+
+
+    &nbsp;&nbsp;&nbsp; <label for="Male">Male</label>
+    &nbsp;&nbsp;&nbsp; <input type="radio" name="gender" id="Male" value="Male">
+
+    &nbsp;&nbsp;&nbsp; <label for="Female">Female</label>
+    &nbsp;&nbsp;&nbsp; <input type="radio" name="gender" id="female" value="Female">
+
+    &nbsp;&nbsp;&nbsp; <label for="Other">Other</label>
+    &nbsp;&nbsp;&nbsp; <input type="radio" name="gender" id="other" value="Other"><br><br>
+
+
+    &nbsp;&nbsp;&nbsp;<label for="State">State</label>
+    &nbsp;&nbsp;&nbsp;<select id="state">
+        <option value="Maharashtra" id="Maharashtra">Maharashtra</option>
+        <option value="TamilNadu" id="TamilNadu">Tamil Nadu</option>
+        <option value="Jammu&Kashmir" id="JammuKashmir">Jammu & Kashmir</option>
+        <option value="Gujrat" id="Gujrat">Gujrat</option>
+        <option value="Delhi" id="Delhi">Delhi</option>
+        <option value="UtterPradesh" id="UtterPradesh">Utter Pradesh</option>
+
+    </select>
+    
+    <br>
+
+
+
+        &nbsp;&nbsp;&nbsp;<input type="button" value="Add Data Into Table" onclick="show()">
+
+        <br>
+        <br>
+</div>
+    <br>
+
+    <table id="table" border="1">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>State</th>
+        </tr>
+    </table>
+
+</body>
+</html>
