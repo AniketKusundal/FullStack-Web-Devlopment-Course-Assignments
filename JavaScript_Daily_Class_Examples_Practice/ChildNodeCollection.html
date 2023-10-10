@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child node Collection </title>
+
+    <script>
+
+        function show() {
+            
+       
+        let ob1 = document.getElementById("d1")
+        console.log(ob1.childNodes.length);
+
+        for (let i = 0; i<ob1.childNodes; i++) {
+            console.log(ob1.childNodes[i]);
+            
+        }
+    }
+    </script>
+</head>
+<body>
+
+        <input type="button" value="Click" onclick="show()">
+
+        <p>Print All The Prime Numbers</p>
+        <br>
+        <input type="text" id="t1" placeholder="Enter Number">
+        <br>
+        <div id="d1">
+            <p>Lorem, ipsum dolor.</p>
+            <br>
+            <div></div>
+        </div>
+</body>
+</html>
