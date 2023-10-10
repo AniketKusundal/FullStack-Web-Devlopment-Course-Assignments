@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating HTML ELEMENT DYNAMICALLY</title>
+
+    <script>
+            function show() {
+                let ob1 = document.getElementById("t1")
+                let x =Number(ob1.value)
+                let p = 0
+                let mytabel = document.getElementById("table")
+
+
+                for (let  i= 1; i < 10; i++) {
+                    
+                    p = x*i
+                    let r1 = document.createElement("tr")
+                    let d1 = document.createElement("td")
+                    let d2 = document.createElement("td")
+                    
+
+                    d1.innerHTML = x + "*" +i
+                    d2.innerHTML=p
+                    r1.append(d1)
+                    r1.append(d2)
+                    mytabel.append(r1)
+                }
+            }
+    </script>
+</head>
+<body>
+
+    <input type="text" id="t1">
+    <table id="table" border="1"></table>
+    <br>
+    <input type="button" value="Enter" onclick="show()">
+</body>
+</html>
