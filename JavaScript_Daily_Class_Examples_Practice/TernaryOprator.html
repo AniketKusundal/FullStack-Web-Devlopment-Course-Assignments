@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ternary Oprator</title>
+
+    <script>
+
+        function show() {
+            let ob = document.getElementById('t1')
+            let ob2 = document.getElementById('d1')
+            let x = Number(ob.value)
+            ob2.innerText = x%2==0?"Even":"Odd"
+        
+        }
+
+    </script>
+</head>
+<body>
+    <input type="text" id="t1">
+    <div id="d1"></div><br>
+    <input type="button" value="Click" onclick="show()">
+</body>
+</html>
