@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Create Html Element dynamically</title>
+
+    <script>
+        function show() {
+
+
+            let t1 = document.createElement("input")
+            let ob = document.getElementById("d1")
+
+                t1.type="text"
+                t1.Value="hello aniket"
+
+            let hr1 = document.createElement("hr")
+                ob.append(t1)
+                ob.append(hr1)
+                // ob.prepend(t1)
+
+
+
+
+                //  div is here
+                ob.style.backgroundColor = "red"
+                ob.style.width = "70%"
+                ob.style.height = "200px"
+
+
+
+                //  create text node 
+                let n1 = document.createTextNode("This is Text")
+                // document.body.append(n1)
+                ob.append(n1)
+
+               
+        }
+    </script>
+
+</head>
+<body>
+    
+    <input type="button" value="Click" onclick="show()">
+    <!-- <input type="text"> -->
+    <br>
+
+    <!-- div is Here -->
+    <div id="d1"></div>
+
+    
+</body>
+</html>
