@@ -89,3 +89,8 @@
 
         s1.showstudent()
         s2.showstudent()
+
+
+
+        console.log(typeof student)  // ---> it is function
+        console.log(Object.getOwnPropertyNames(student.prototype));  // ---> represents all the functions 
