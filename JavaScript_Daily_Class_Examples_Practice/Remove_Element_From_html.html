@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Element From HTML</title>
+
+
+    <script>
+        function deleteNode() {
+            
+            let t1 = document.createElement("input")
+            t1.id="fname"
+            t1.value="remove me"
+            document.body.append(t1)
+        }
+
+
+        function delet() {
+            let ob = document.getElementById("fname")
+            ob.remove()
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Click To Add" onclick="deleteNode()">
+    <input type="button" value="Remove Element" onclick="delet()">
+</body>
+</html>
