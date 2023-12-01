@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dom Tree</title>
+    <script>
+        function display() {
+                // body child node
+                // let arr = document.body.childNodes
+                // console.log(arr);
+
+
+                // for (let i = 0; i < arr.length; i++) {
+                //     console.log(arr[i]);
+                    
+                // }
+
+
+
+
+                //  child nodes of the div
+                let ob = document.getElementById("div1")
+                    let arr1 = ob.childNodes
+                    console.log(arr1);
+            }
+    </script>
+</head>
+<body>
+    <div id="div1">div tag</div>
+    <p>p tag</p>
+    <input type="button" value="Click" onclick="display()">
+</body>
+</html>
