@@ -1,0 +1,37 @@
+<!-- ChildNodes collection get all the nodes (Tags & Text) but in many situation we need elements only then need elements navigation properties -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Element Only Navigation</title>
+    <script>
+        function show() {
+
+            let array1 = document.body.childNodes    // ----> this code is for the to display the tags and the Text it means the(when we press enter text node is fromed)
+            for (let i = 0; i < array1.length; i++) {
+                const node = array1[i];
+                console.log(node);
+                
+            }
+            
+
+            console.log("send array");
+
+            let  array = document.body.children    // ---->>  (children get all the child element) AND This code is for to show only the only HTML tags
+
+            for (let index = 0; index < array.length; index++) {
+                const node = array[index];
+                console.log(node);
+                console.log(document.body.firstElementChild);
+                
+            }
+        }
+    </script>
+</head>
+<body>
+        <div></div>
+        <p></p>
+        <div></div>
+        <input type="button" value="Click" onclick="show()">
+</body>
+</html>
