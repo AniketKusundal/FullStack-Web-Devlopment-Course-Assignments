@@ -1,0 +1,92 @@
+<!-- 2 Write the HTML code for generating the form as shown below. Apply the internal CSS to following form change the font size of the heading to 6pt and change the color to red. And also change the background color yellow. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2 set B</title>
+
+    <style>
+        .container{
+            height: 500px;
+            width: 800px;
+            border: 1px solid black;
+            padding: 10px;
+            display: flex;
+        }
+
+        form{
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .btn{
+
+            padding: 16px;
+            width: 80px;
+            background-color: rgb(198, 69, 198);
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <form border="1">
+            <h3>Log Into The World</h3>
+            <label for="Name">Enter Your Name :</label>
+            <input type="text" placeholder="Enter your Name"><br><br>
+            <label for="Name">Enter Your Password :</label>
+            <input type="password" placeholder="Enter your Password"><br><br>
+            
+            
+            
+            
+            
+            <span>Which of the Oprating System have you used ?</span><br><br>
+            
+            <input type="checkbox" name="Linux" id="linux">
+            <label for="Linux">Linux</label>
+            
+            <input type="checkbox" name="Windows XP" id="windows">
+            <label for="Linux">Windows XP</label>
+            
+            <input type="checkbox" name="Macintosh 8.0" id="linux">
+            <label for="Linux">Macintosh 8.0</label><br><br>
+            
+            <span>Which Oprating System Do You like The best ?</span><br><br>
+            
+            
+            
+            
+            
+            
+            <input type="radio" name="OP"  value="linux" id="linux">
+            <label for="Linux">Linux</label>
+            
+            <input type="radio" name="OP" value="windows " id="linux">
+            <label for="Linux">Windows XP</label>
+            
+            
+            
+            <input type="radio" name="OP" value="Macintosh" id="Macintosh">
+            <label for="Linux">Macintosh 8.0</label><br>
+            
+            <p>You Have Compeleted The Form </p><br>
+            <input type="submit" value="Submit" class="btn">
+            
+            
+        </form>
+    </div>
+
+</body>
+</html>
